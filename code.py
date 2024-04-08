@@ -6,10 +6,6 @@ import_file = "allow_list.txt"
 
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 
-# Display `import_file`
+# First line of `with` statement
 
-print(import_file)
-
-# Display `remove_list`
-
-print(remove_list)
+with open(import_file, "r") as file:
