@@ -39,3 +39,17 @@ https://github.com/ToniT0dorov/Update-a-file-through-a-Python-algorithm/blob/cd6
 Now I will need a code that removes the elements of <code>remove_list</code> from the <code>ip_addresses list</code>. This will require both an iterative statement and a conditional statement.
 For now i will just add the iterative statement
 https://github.com/ToniT0dorov/Update-a-file-through-a-Python-algorithm/blob/bb8d854a1da4e24485ed4517254d3f27b4d49554/5.py#L1-L29
+
+<h2>Removing IP addresses that are on the remove list</h2>
+Now Iam building a  conditional statement to remove the elements of <code>remove_list</code> from the <code>ip_addresses</code> list. The conditional statement will be placed inside the iterative statement that loops through <code>ip_addresses</code>. In every iteration, if the current element in the ip_addresses list is in the remove_list, the remove() method will be used to remove that element.
+
+Afterwards,I display the updated ip_addresses list to verify that the elements of remove_list are no longer in the ip_addresses. 
+https://github.com/ToniT0dorov/Update-a-file-through-a-Python-algorithm/blob/7082c1476825f315c80708914b6dee4897c5d193/6.py#L1-L38
+
+<h2>Updating the file with the revised list of IP addresses</h2>
+The next step is to update the original file that was used to create the <code>ip_addresses</code> list. A line of code containing the <code>.join()</code> method be added to the code so that the file can be updated. This is necessary because ip_addresses must be in string format when used inside the with statement to rewrite the file.
+
+The <code>.join()</code> method takes in an iterable (such as a list) and concatenates every element of it into a string. The <code>.join()</code> method is applied to a string consisting of the character that will be used to separate every element in the iterable once its converted into a string. In the code below, the method is applied to the string <code>" "</code>, which contains just a space character. The argument of the <code>.join()</code> method is the iterable I want to convert, and in this case, that's <code>ip_addresses</code>. As a result, it converts <code>ip_addresses</code> from a list back into a string with a space between each element and the next.
+
+After this line with the <code>.join()</code> method, i am building the <code>with</code> statement that rewrites the original file. Use the <code>"w"</code> parameter when calling the <code>open()</code> function to delete the contents in the original file and replace it with what I want to write. 
+https://github.com/ToniT0dorov/Update-a-file-through-a-Python-algorithm/blob/f3be4a4244390e28635f3be40cefea3557927b67/7.py#L1-L46
